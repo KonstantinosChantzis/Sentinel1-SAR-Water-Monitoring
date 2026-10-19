@@ -1,3 +1,4 @@
+<a name="english"></a>
 # Sentinel-1 SAR Water Monitoring – North Sea & Baltic Sea
 **English | [Deutsch](#deutsch)**
 
@@ -47,7 +48,7 @@ ArcGIS Pro · Sentinel-1 RTC · ArcGIS Living Atlas · Raster Functions (Extract
 
 <a name="deutsch"></a>
 # Sentinel-1-SAR-Wasserüberwachung – Nord- und Ostsee
-**[English](#sentinel-1-sar-water-monitoring--north-sea--baltic-sea) | Deutsch**
+**[English](#english) | Deutsch**
 
 ## Überblick
 Wassererkennung mit Sentinel-1-SAR-Daten (RTC) über Nord- und Ostsee im Raum Schleswig-Holstein, komplett neu aufgebaut in **ArcGIS Pro** mit dem Esri **ArcGIS Living Atlas**. Radar funktioniert bei Tag und Nacht und durch Wolken hindurch und eignet sich deshalb gut zur Überwachung von Wasserflächen.
@@ -63,7 +64,20 @@ Teil meines Portfolios zum Esri-Kurs *The ArcGIS Imagery MOOC: Foundations and F
 6. Pixelzahlen in km² umgerechnet (Python, mit Flächenkorrektur für Web Mercator) und mit einer Land-/Meer-Referenz verglichen.
 
 ## Ergebnisse
-Siehe Tabellen oben. Pixelzahlen: 2.889.555 (kein Wasser) und 1.908.966 (Wasser). Erkannte Wasserfläche: Nordsee 77,7 %, Ostsee 87,0 % der Referenzfläche. Falsch-positive Landflächen: 11.416 km² (16,8 %).
+| Klasse | Pixel (ArcGIS-Attributtabelle) |
+|---|---|
+| 0 – kein Wasser | 2.889.555 |
+| 1 – Wasser | 1.908.966 |
+
+| Region | Referenz-Meeresfläche (km²) | Erkannte Wasserfläche (km²) | Erkennungsrate |
+|---|---|---|---|
+| Nordsee (Länge < 8,9°E) | 19.513 | 15.152 | 77,7 % |
+| Ostsee (Länge > 9,7°E) | 15.306 | 13.311 | 87,0 % |
+
+Falsch-positive Landflächen: 11.416 km² (16,8 %). Vollständige Tabelle: [water_area_results.csv](water_area_results.csv)
+
+## Bilder
+Siehe Abschnitt „Images“ oben.
 
 ## Einschränkungen
 - Ein fester Schwellenwert für die ganze Szene: windaufgerautes Meer (vor allem Nordsee) wird teilweise nicht erkannt.
