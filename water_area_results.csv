@@ -1,0 +1,5 @@
+region,reference_sea_area_km2,detected_water_area_km2,detection_rate_percent,threshold_vv
+North Sea (lon < 8.9E),19513,15152,77.7,-1.25
+Baltic Sea (lon > 9.7E),15306,13311,87.0,-1.25
+Scene total (all pixels),103371,40494,39.2,-1.25
+Land false positives (inside scene total),n/a,11416,16.8,-1.25
